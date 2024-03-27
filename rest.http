@@ -1,0 +1,42 @@
+GET http://localhost:3000/test/wqwre?username=charles&age=21
+Content-Type: application/json
+
+{
+    "address":{
+        "street":"capistrano",
+         "barangay":"40"
+    }
+}
+
+###
+POST http://localhost:3000/tennants/
+Content-Type: application/json
+
+
+{
+    "name":"Mark",
+    "age":20,
+    "occupation":"student",
+    "address.houseNo":41,
+    "address.street":"Capistrano",
+    "address.barangay":"Lapasan"
+}
+
+
+###
+GET http://localhost:3000/tennants/
+###
+GET http://localhost:3000/tennants/6603d0d53a0bdeaee2743921
+###
+PATCH  http://localhost:3000/tennants/6603d0d53a0bdeaee2743921
+Content-Type: application/json
+
+{
+
+
+    "address.houseNo":42,
+    "address.street":"Highway"
+
+}
+###
+DELETE  http://localhost:3000/tennants/6603d0d53a0bdeaee2743921
